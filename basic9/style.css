@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 2px solid #000;
+    background-color: green;
+    display: flex;
+}
+
+.container .item{
+    border: 2px solid #000;
+    background-color: deepskyblue;
+    flex-basis: auto; /* 원래 기본값은 auto인데  */
+    flex: 1; 
+    /* = flex : 1 1 0%  basis가 0이 적용됨*/
+    /* flex: flex-grow flex-shrink flex-basis; */
+    flex : 0 1 auto; /* 원래는 이게 기본값 (아무것도 안적었을때)*/
+    flex: 1 1 300px;
+    /* flex-grow:1; 늘어날 공간이 있다면 늘어나겠다
+    flex-shrink: 1; 줄어들 공간이 있다면 줄어들겠다
+    flex-basis: auto; 넓이를 설정했다면 그것을 인식하겠다 */
+}
+
+
+.container .item:nth-child(1){
+    flex: 1 0 auto;
+    width: 200px;
+    /*flex: 1 0 auto; 
+    (1)늘어는 나되 (2)줄어들지는 (auto)200px 밑으로 줄어들지는 않음  */
+}

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rgb(79, 116, 184);
+    display: flex;
+    /* span테그는 공간 인식 못하지만 플렉스를 주면 공간인식 
+        블록요소가 됐다고 생각하기. text-align 안먹힘*/
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+
+.container .item {
+    border: 2px solid #000;
+    background-color: rgb(77, 148, 172);
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    
+    /* align-item 하면 자식움직이게하고
+       align-self 하면 자신을 움직이게 함 */
+}

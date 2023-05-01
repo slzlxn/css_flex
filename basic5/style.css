@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 2px solid #000;
+    background-color: rgb(167, 214, 167);
+}
+
+.container .item{
+    border: 2px solid #000;
+    background-color: rgb(43, 136, 167);
+}
+
+
+/* ----------------- */
+.container{
+    display: flex;
+}
+
+.container .item{
+    /* 줄어들어라! 늘어나지마라 */
+    /* 플렉스는 기본적으로 늘어나진 않고 줄어는 든다 */
+    flex-basis: auto;/* 기본값 */
+    /* flex-basis: 100px; 100px을 설정해도 내용이 더 길면 길어짐*/
+    width: 100px;
+
+    /* 늘어나지마라 
+        0 - false, 0을 제외한 나머지 숫자는 true*/
+    flex-grow: 0;/* 기본값 */
+    flex-grow: 1;
+
+    /* 줄어들어라 */
+    flex-shrink: 1;/* 기본값 */
+    flex-shrink: 0;
+    
+}
